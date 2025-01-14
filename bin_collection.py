@@ -7,7 +7,6 @@ url = "https://forms.rbwm.gov.uk/bincollections?uprn=" + urpn
 content = requests.get(url).text
 
 soup = BeautifulSoup(content, features="html.parser")
-soup.prettify()
 
 next_collection_div = soup.find("div", { "class": "widget-bin-collections" })
 
